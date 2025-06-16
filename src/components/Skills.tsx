@@ -1,115 +1,86 @@
-import React from 'react';
-import { 
-  Cloud, 
-  Server, 
-  Code, 
-  Database, 
-  Shield, 
-  Monitor,
-  GitBranch,
-  Container
-} from 'lucide-react';
+import React from "react";
 
 const Skills: React.FC = () => {
-  const skillCategories = [
-    {
-      title: "Cloud Platforms",
-      icon: <Cloud className="w-8 h-8 text-blue-600 dark:text-blue-400" />,
-      skills: [
-        { name: "AWS", level: 95 },
-        { name: "Azure", level: 80 },
-      ]
-    },
-    {
-      title: "Container & Orchestration",
-      icon: <Container className="w-8 h-8 text-purple-600 dark:text-purple-400" />,
-      skills: [
-        { name: "Docker", level: 95 },
-        { name: "Kubernetes", level: 90 },
-        { name: "Helm", level: 85 },
-      ]
-    },
-    {
-      title: "Infrastructure as Code",
-      icon: <Server className="w-8 h-8 text-green-600 dark:text-green-400" />,
-      skills: [
-        { name: "Terraform", level: 90 },
-        { name: "Ansible", level: 85 },
-        { name: "CloudFormation", level: 80 },
-      ]
-    },
-    {
-      title: "CI/CD & Version Control",
-      icon: <GitBranch className="w-8 h-8 text-orange-600 dark:text-orange-400" />,
-      skills: [
-        { name: "Jenkins", level: 90 },
-        { name: "GitLab CI", level: 85 },
-        { name: "GitHub Actions", level: 80 },
-      ]
-    },
-    {
-      title: "Monitoring & Observability",
-      icon: <Monitor className="w-8 h-8 text-red-600 dark:text-red-400" />,
-      skills: [
-        { name: "Prometheus", level: 90 },
-        { name: "Grafana", level: 85 },
-        { name: "ELK Stack", level: 80 },
-      ]
-    },
-    {
-      title: "Programming & Scripting",
-      icon: <Code className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />,
-      skills: [
-        { name: "Python", level: 90 },
-        { name: "Bash", level: 95 },
-        { name: "YAML", level: 95 }
-      ]
-    }
-  ];
+    const techStacks = [
+        {
+            title: "Cloud Platforms",
+            skills: [
+                { name: "AWS", icon: "https://iamops.io/wp-content/uploads/2024/06/aws.svg", color: "text-orange-500" },
+                { name: "GCP", icon: "https://iamops.io/wp-content/uploads/2024/06/Google-cloud.svg", color: "text-blue-500" },
+                { name: "Azure", icon: "https://iamops.io/wp-content/uploads/2024/06/Azure.svg", color: "text-blue-600" },
+            ],
+        },
+        {
+            title: "IaC and Automation",
+            skills: [
+                { name: "Terraform", icon: "https://iamops.io/wp-content/uploads/2024/06/teraform.svg", color: "text-purple-600" },
+                { name: "Ansible", icon: "https://iamops.io/wp-content/uploads/2024/06/Azad-Gamer.svg", color: "text-red-600" },
+                { name: "CloudFormation", icon: "https://iamops.io/wp-content/uploads/2024/06/aws-2.svg", color: "text-orange-500" },
+                { name: "Pulumi", icon: "https://iamops.io/wp-content/uploads/2024/07/pulmi-new.svg", color: "text-indigo-600" },
+            ],
+        },
+        {
+            title: "CI/CD",
+            skills: [
+                { name: "Jenkins", icon: "https://iamops.io/wp-content/uploads/2024/06/Jenkins.svg", color: "text-blue-600" },
+                { name: "GitHub Actions", icon: "https://iamops.io/wp-content/uploads/2024/06/github-actions.svg", color: "text-gray-800" },
+                { name: "GitLab", icon: "https://iamops.io/wp-content/uploads/2024/06/gitlab.svg", color: "text-orange-500" },
+                { name: "Git", icon: "https://iamops.io/wp-content/uploads/2024/06/Git_icon.svg", color: "text-red-600" },
+            ],
+        },
+        {
+            title: "Monitoring",
+            skills: [
+                { name: "Prometheus", icon: "/images/skills/prometheus.svg", color: "text-red-500" },
+                { name: "Grafana", icon: "https://iamops.io/wp-content/uploads/2024/06/Grafana.svg", color: "text-orange-400" },
+                { name: "ELK Stack", icon: "/images/skills/elk.svg", color: "text-yellow-600" },
+                { name: "New Relic", icon: "https://iamops.io/wp-content/uploads/2024/06/relic-new.png", color: "text-green-500" },
+                { name: "Datadog", icon: "https://iamops.io/wp-content/uploads/2024/06/datadog.svg", color: "text-yellow-600" },
+                { name: "CloudWatch", icon: "https://iamops.io/wp-content/uploads/2024/06/aws-cloudwatch.svg", color: "text-orange-500" },
+            ],
+        },
+    ];
 
-  return (
-    <section id="skills" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">Skills & Technologies</h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto transition-colors duration-300">
-            A comprehensive toolkit for modern DevOps practices and cloud infrastructure management.
-          </p>
-        </div>
+    return (
+        <section id="skills" className="py-20 bg-white dark:bg-gray-900">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Section header */}
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                        <span className="text-blue-600">My</span> Skills
+                    </h2>
+                </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skillCategories.map((category, index) => (
-            <div
-              key={index}
-              className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 hover:shadow-lg dark:hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700"
-            >
-              <div className="flex items-center mb-6">
-                {category.icon}
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white ml-3 transition-colors duration-300">{category.title}</h3>
-              </div>
-              
-              <div className="space-y-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex}>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors duration-300">{skill.name}</span>
-                      <span className="text-sm text-gray-500 dark:text-gray-400 transition-colors duration-300">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 transition-colors duration-300">
-                      <div
-                        className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+                {/* Tech Stack Grid */}
+                <div className="space-y-12">
+                    {techStacks.map((stack, index) => (
+                        <div key={index} className="tech-stack-row">
+                            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">{stack.title}</h3>
+                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                                {stack.skills.map((skill, skillIndex) => (
+                                    <div
+                                        key={skillIndex}
+                                        className="flex flex-col items-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg transition-all duration-300 hover:shadow-md hover:scale-105"
+                                    >
+                                        <img
+                                            src={skill.icon}
+                                            alt={skill.name}
+                                            className="w-12 h-12 mb-2"
+                                            onError={(e) => {
+                                                console.error(`Failed to load image for ${skill.name}`);
+                                                e.currentTarget.style.display = "none";
+                                            }}
+                                        />
+                                        <span className={`text-sm font-medium ${skill.color}`}>{skill.name}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+        </section>
+    );
 };
 
 export default Skills;
